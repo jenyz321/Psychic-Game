@@ -1,11 +1,14 @@
 h1 {
-    font-size: 22px;
+    font-size: 40px;
     color: teal;
+    font-family: 'Mountains of Christmas', cursive;
 }
 body {
-    color: black;
+    
+    background-color: black;
 }
 p {
-    font-size: 16px;
+    font-size: 22px;
     color: white;
+    font-family: 'Mountains of Christmas', cursive;
 }

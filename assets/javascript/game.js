@@ -7,16 +7,23 @@ var losses = 0;
 var guessesLeft = 10;
 var guessesSoFar = 0;
 
-var winsText = document.getElementbyID("Wins");
-var lossesText = document.getElementbyID("Losses");
-var guessesLeftText = document.getElementbyID("Guesses Left");
-var guessesSoFarText = document.getElementbyID("Guesses so far")
+var winsText = document.getElementById("wins");
+var lossesText = document.getElementById("losses");
+var guessesLeftText = document.getElementById("guessesLeft");
+var guessesSoFarText = document.getElementById("yourGuessesSoFar");
 
 document.onkeyup = function(event) {
     var userGuess = event.key;
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-}
 
-
-
+    if (userGuess == computerGuess) {
+        wins++;
+    }   else {
+        losses++; 
+    }
+    winsText.textContent = "wins" + wins;
+    lossesText.textContent = "losses" + losses;
+    guessesLeftText.textContent = "guessesLeft" - guessesLeft;
+    guessesSoFarText.textContent = "yourGuessesSoFar" + userGuess;
+};
